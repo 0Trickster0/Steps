@@ -12,6 +12,7 @@ public class Police : MonoBehaviour {
     private SpriteRenderer sr;
     private GameObject policeSprite;
     private Rigidbody2D rb2d;
+    private bool isFailed;
 
     public int moveSpeed;
     public RaycastHit2D hit;
@@ -63,9 +64,11 @@ public class Police : MonoBehaviour {
         }
         if (hit.collider != null)
         {
-            if (hit.collider.tag == "Player")
+            if (hit.collider.tag == "Player"&&!isFailed)
             {
-                Debug.Log("Game Over");
+                isFailed = true;
+                GameObject.Find("SceneCanvas").SendMessage("StageFailure");
+                GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
             }
         }
     }
@@ -149,9 +152,11 @@ public class Police : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player"&&!isParalyzed)
+        if (collision.collider.tag == "Player"&&!isParalyzed&&!isFailed)
         {
-            Debug.Log("Game Over");
+            isFailed = true;
+            GameObject.Find("SceneCanvas").SendMessage("StageFailure");
+            GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
         }
         if (collision.collider.tag == "Object"|| collision.collider.tag == "Police")
         {

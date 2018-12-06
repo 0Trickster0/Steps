@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public RaycastHit2D hit;
     public float jumpForce;  //跳跃的力
     public float moveSpeed; //水平移动速度
+    public bool isDisabled=true;
 
     public KeyCode leftKey;
     public KeyCode rightKey;
@@ -50,7 +51,10 @@ public class Player : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Move();
+        if (!isDisabled)
+        {
+            Move();
+        }
     }
 
     private void Move()

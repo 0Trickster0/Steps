@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Steps : MonoBehaviour {
 
-    public string nextScene;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class Steps : MonoBehaviour {
     {
         if (collision.collider.tag == "Player")
         {
-            SceneManager.LoadScene(nextScene);
+            GameObject.Find("SceneCanvas").SendMessage("StageSuccess");
         }
     }
 }

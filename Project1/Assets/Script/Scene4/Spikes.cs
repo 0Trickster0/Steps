@@ -19,6 +19,8 @@ public class Spikes : MonoBehaviour {
         if (collision.tag == "Player")
         {
             Debug.Log("Game Over");
+            GameObject.Find("SceneCanvas").SendMessage("StageFailure");
+            GameObject.Find("WisePointController").SendMessage("StageFailure", 3);
         }
     }
 }

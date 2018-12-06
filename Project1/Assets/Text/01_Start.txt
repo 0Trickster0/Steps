@@ -1,8 +1,5 @@
-[
-{"id":1,"fontSize":29,"textInterval":0.05,"next":0,"text":"学识与真理从此时由抽象变得具体\n\n\n文字使得我们更加渴求去了解这个世界\n\n\n之后的每一次阅读\n\n\n都成为了人类思考和权衡的筹码"},
-{"id":2,"fontSize":29,"textInterval":0.05,"next":0,"text":"我是你哥哥"},
-{"id":3,"fontSize":29,"textInterval":0.05,"next":0,"text":"我们都是尼玛的儿子"},
-{"id":4,"fontSize":29,"textInterval":0.05,"next":0,"text":"你妈死了"},
-{"id":5,"fontSize":29,"textInterval":0.15,"next":1,"text":"警告：你妈死了"}
+﻿[
+{"id":1,"fontSize":36,"textInterval":0.05,"next":0,"text":"\n\n\n\n\n第一章《新华字典》"},
+{"id":2,"fontSize":29,"textInterval":0.05,"next":1,"text":"\n\n\n\n\n“毁禁一本好书就是杀死理性本身。”——约翰•弥尔顿"}
 
 ]

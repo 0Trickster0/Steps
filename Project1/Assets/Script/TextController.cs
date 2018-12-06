@@ -4,13 +4,17 @@ using UnityEngine;
 using LitJson;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextController : MonoBehaviour {
 
     public int i;
-    public string fileName;
+    public string startFileName;
+    public string successFileName;
+    public string failFileName;
     public List<Node> nodeArray = new List<Node>();
     public Text CanvasText;
+    public string nextScene;
 
     private string shownText;
 
@@ -25,7 +29,7 @@ public class TextController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        nodeArray = ReadJsonFile(fileName);
+        nodeArray = ReadJsonFile(startFileName);
         StartCoroutine(LoadText(nodeArray[0].text));
     }
 	
@@ -45,7 +49,7 @@ public class TextController : MonoBehaviour {
             CanvasText.text = shownText;
             yield return new WaitForSeconds((float)nodeArray[i].textInterval);
         }
-        StopAllCoroutines();
+        StopCoroutine("LoadText");
     }
 
     //单击左键后显示所有文字
@@ -94,8 +98,27 @@ public class TextController : MonoBehaviour {
                 {
                     Debug.Log("文本结束");
                     CanvasText.text = "";
+                    shownText = "";
                     StartCoroutine(DarkenScreen());
                 } 
+                //加载下一场景
+                else if(nodeArray[i].next == 2)
+                {
+                    SceneManager.LoadScene(nextScene);
+                }
+                //加载结局
+                else if(nodeArray[i].next == 3)
+                {
+                    if(WisePointController.Instance.wisePointArray[0]==true&& WisePointController.Instance.wisePointArray[1] == true 
+                        && WisePointController.Instance.wisePointArray[2] == true && WisePointController.Instance.wisePointArray[3] == true)
+                    {
+                        SceneManager.LoadScene("6");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("5");
+                    }
+                }
             }
         }
     }
@@ -103,12 +126,43 @@ public class TextController : MonoBehaviour {
     IEnumerator DarkenScreen()
     {
         float trans;
+        Image darkenScreen = GameObject.Find("DarkenScreenImage").GetComponent<Image>();
         for (trans = 1; trans >= 0; trans-=0.005f)
         {
-            GameObject.Find("DarkenScreenImage").GetComponent<Image>().color = new Vector4(0,0,0,trans);
-            yield return new WaitForSeconds(0.01f);
+            darkenScreen.color = new Vector4(0,0,0,trans);
+            yield return new WaitForSeconds(0.007f);
         }
-        GameObject.Find("SceneCanvas").SetActive(false);
+        GameObject.Find("DarkenScreenImage").SetActive(false);
+        GameObject.Find("CanvasText").SetActive(false);
+        Player.Instance.isDisabled = false;
         StopAllCoroutines();
+    }
+
+    IEnumerator ShownScreen(string fileName)
+    {
+        gameObject.transform.Find("DarkenScreenImage").gameObject.SetActive(true);
+        gameObject.transform.Find("CanvasText").gameObject.SetActive(true);
+        float trans;
+        for (trans = 0; trans <= 1; trans += 0.005f)
+        {
+            GameObject.Find("DarkenScreenImage").GetComponent<Image>().color = new Vector4(0, 0, 0, trans);
+            yield return new WaitForSeconds(0.007f);
+        }
+        nodeArray = ReadJsonFile(fileName);
+        StartCoroutine(LoadText(nodeArray[0].text));
+    }
+
+    public void StageSuccess()
+    {
+        Player.Instance.isDisabled = true;
+        i = 0;
+        StartCoroutine(ShownScreen(successFileName));
+    }
+
+    public void StageFailure()
+    {
+        Player.Instance.isDisabled = true;
+        i = 0;
+        StartCoroutine(ShownScreen(failFileName));
     }
 }

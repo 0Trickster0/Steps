@@ -1,0 +1,5 @@
+﻿[
+{"id":1,"fontSize":50,"textInterval":0.05,"next":0,"text":"\n\n\n\n\n最终章"},
+{"id":2,"fontSize":29,"textInterval":0.05,"next":1,"text":"\n\n\n\n\n“无知是这个世界上第二糟糕的东西，仅次于邪恶。”——安娜•塞维尔"}
+
+]
