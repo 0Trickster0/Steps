@@ -29,7 +29,7 @@ public class PlayerScene1 : MonoBehaviour {
 
     private void Fire()
     {
-        if (itemStatus[0] && Input.GetKeyDown(KeyCode.Alpha1))
+        if (itemStatus[0] && Input.GetKeyDown(Player.Instance.item1Key))
         {
             Debug.Log("使用火");
             if(Player.Instance.hit.collider != null)
@@ -45,24 +45,31 @@ public class PlayerScene1 : MonoBehaviour {
 
     private void Gold()
     {
-        if (itemStatus[1] && Input.GetKeyDown(KeyCode.Alpha2))
+        if (itemStatus[1] && Input.GetKeyDown(Player.Instance.item2Key))
         {
             Debug.Log("使用金");
-            if (Player.Instance.faceDirection == Vector2.left)
+            if (Player.Instance.hit.collider != null)
             {
-                Instantiate(Blade, new Vector3(transform.position.x - 0.25f, transform.position.y, 0), transform.rotation);
+                if (Player.Instance.hit.collider.tag == "Object")
+                {
+                    Destroy(Player.Instance.hit.collider.gameObject);
+                }
             }
-            else if(Player.Instance.faceDirection == Vector2.right)
-            {
-                Instantiate(Blade, new Vector3(transform.position.x + 0.25f, transform.position.y, 0), transform.rotation);
-            }
-            
+            //if (Player.Instance.faceDirection == Vector2.left)
+            //{
+            //    Instantiate(Blade, new Vector3(transform.position.x - 0.25f, transform.position.y, 0), transform.rotation);
+            //}
+            //else if(Player.Instance.faceDirection == Vector2.right)
+            //{
+            //    Instantiate(Blade, new Vector3(transform.position.x + 0.25f, transform.position.y, 0), transform.rotation);
+            //}
+
         }
     }
 
     private void Wood()
     {
-        if (itemStatus[2] && Input.GetKeyDown(KeyCode.Alpha3)&&!Player.Instance.isJumping)
+        if (itemStatus[2] && Input.GetKeyDown(Player.Instance.item3Key) &&!Player.Instance.isJumping)
         {
             Debug.Log("使用木");
             Instantiate(Tree, new Vector3(transform.position.x, transform.position.y + 0.8255f, 0), transform.rotation);
@@ -71,7 +78,7 @@ public class PlayerScene1 : MonoBehaviour {
 
     private void Water()
     {
-        if (itemStatus[3] && Input.GetKeyDown(KeyCode.Alpha4))
+        if (itemStatus[3] && Input.GetKeyDown(Player.Instance.item4Key))
         {
             Debug.Log("使用水");
             if(Player.Instance.hit.collider != null)
@@ -86,7 +93,7 @@ public class PlayerScene1 : MonoBehaviour {
 
     private void Earth()
     {
-        if (itemStatus[4] && Input.GetKeyDown(KeyCode.Alpha5))
+        if (itemStatus[4] && Input.GetKeyDown(Player.Instance.item5Key))
         {
             Debug.Log("使用土");
             Instantiate(Mud, new Vector3(transform.position.x, transform.position.y + 0.8255f, 0), transform.rotation);
@@ -96,7 +103,7 @@ public class PlayerScene1 : MonoBehaviour {
 
     private void Wing()
     {
-        if (itemStatus[5] && Input.GetKeyDown(KeyCode.Alpha6))
+        if (itemStatus[5] && Input.GetKeyDown(Player.Instance.item6Key))
         {
             Debug.Log("使用羽");
             canFly = true;

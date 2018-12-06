@@ -104,11 +104,18 @@ MonoBehaviour:
   jumpForce: 500
   moveSpeed: 5
   isDisabled: 1
+  isFailed: 0
   leftKey: 97
   rightKey: 100
   jumpKey: 32
   upKey: 119
   downKey: 115
+  item1Key: 106
+  item2Key: 107
+  item3Key: 108
+  item4Key: 117
+  item5Key: 105
+  item6Key: 111
 --- !u!212 &212399549934408512
 SpriteRenderer:
   m_ObjectHideFlags: 1

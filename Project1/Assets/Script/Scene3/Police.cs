@@ -64,9 +64,9 @@ public class Police : MonoBehaviour {
         }
         if (hit.collider != null)
         {
-            if (hit.collider.tag == "Player"&&!isFailed)
+            if (hit.collider.tag == "Player"&&!Player.Instance.isFailed)
             {
-                isFailed = true;
+                Player.Instance.isFailed = true;
                 GameObject.Find("SceneCanvas").SendMessage("StageFailure");
                 GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
             }
@@ -152,9 +152,9 @@ public class Police : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player"&&!isParalyzed&&!isFailed)
+        if (collision.collider.tag == "Player"&&!isParalyzed&&!Player.Instance.isFailed)
         {
-            isFailed = true;
+            Player.Instance.isFailed = true;
             GameObject.Find("SceneCanvas").SendMessage("StageFailure");
             GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
         }

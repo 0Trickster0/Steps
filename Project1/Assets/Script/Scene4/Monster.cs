@@ -19,7 +19,7 @@ public class Monster : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (isAwaken)
+        if (isAwaken&&transform.position.x<=152)
         {
             transform.Translate(Vector3.right * moveSpeed * Time.fixedDeltaTime);
         }
@@ -36,9 +36,12 @@ public class Monster : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player"&&isAwaken)
+        if (collision.tag == "Player"&&isAwaken&& !Player.Instance.isFailed)
         {
+            Player.Instance.isFailed = true;
             Debug.Log("Game Over");
+            GameObject.Find("SceneCanvas").SendMessage("StageFailure");
+            GameObject.Find("WisePointController").SendMessage("StageFailure", 3);
         }
     }
 }

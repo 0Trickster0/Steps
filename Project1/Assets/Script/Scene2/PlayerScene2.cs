@@ -24,7 +24,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void EnlargeGun()
     {
-        if (itemStatus[0] && Input.GetKeyDown(KeyCode.Alpha1))
+        if (itemStatus[0] && Input.GetKeyDown(Player.Instance.item1Key))
         {
             Debug.Log("使用放大枪");
             if (Player.Instance.hit.collider != null)
@@ -39,7 +39,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void ShrinkGun()
     {
-        if (itemStatus[1] && Input.GetKeyDown(KeyCode.Alpha2))
+        if (itemStatus[1] && Input.GetKeyDown(Player.Instance.item2Key))
         {
             Debug.Log("使用缩小枪");
             if(Player.Instance.hit.collider != null)
@@ -54,7 +54,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void Spring()
     {
-        if (itemStatus[2] && Input.GetKeyDown(KeyCode.Alpha3)&&!Player.Instance.isJumping)
+        if (itemStatus[2] && Input.GetKeyDown(Player.Instance.item3Key) &&!Player.Instance.isJumping)
         {
             Debug.Log("使用马竹");
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1500));
@@ -63,7 +63,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void DimensionDoor()
     {
-        if (itemStatus[3] && Input.GetKeyDown(KeyCode.Alpha4))
+        if (itemStatus[3] && Input.GetKeyDown(Player.Instance.item4Key))
         {
             Debug.Log("使用任意门");
             if (Player.Instance.faceDirection == Vector2.left)
@@ -80,7 +80,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void AirGun()
     {
-        if (itemStatus[4] && Input.GetKeyDown(KeyCode.Alpha5))
+        if (itemStatus[4] && Input.GetKeyDown(Player.Instance.item5Key))
         {
             Debug.Log("使用空气炮");
             if(Player.Instance.hit.collider != null)
@@ -102,7 +102,7 @@ public class PlayerScene2 : MonoBehaviour {
 
     private void GravityGun()
     {
-        if (itemStatus[5] && Input.GetKeyDown(KeyCode.Alpha6))
+        if (itemStatus[5] && Input.GetKeyDown(Player.Instance.item6Key))
         {
             Debug.Log("使用重力枪");
             if(Player.Instance.hit.collider != null)

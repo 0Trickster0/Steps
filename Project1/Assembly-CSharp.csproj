@@ -84,8 +84,10 @@
     <Compile Include="Assets\Script\Scene4\PlayerScene4.cs" />
     <Compile Include="Assets\Script\Scene4\Spikes.cs" />
     <Compile Include="Assets\Script\SceneController.cs" />
+    <Compile Include="Assets\Script\ShowIntroduction.cs" />
     <Compile Include="Assets\Script\Steps.cs" />
     <Compile Include="Assets\Script\TextController.cs" />
+    <Compile Include="Assets\Script\UIController.cs" />
     <Compile Include="Assets\Script\WisePoint.cs" />
     <Compile Include="Assets\Script\WisePointController.cs" />
     <None Include="Assets\Text\03_Failure.txt" />

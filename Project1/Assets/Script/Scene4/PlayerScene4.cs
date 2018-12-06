@@ -29,7 +29,7 @@ public class PlayerScene4 : MonoBehaviour {
 
     private void DoubleJumpShoes()
     {
-        if (itemStatus[0] && Input.GetKeyDown(KeyCode.Alpha1))
+        if (itemStatus[0] && Input.GetKeyDown(Player.Instance.item1Key))
         {
             Debug.Log("使用喷射靴");
             enableDoubleJump = true;
@@ -38,7 +38,7 @@ public class PlayerScene4 : MonoBehaviour {
 
     private void WallJumpClaw()
     {
-        if (itemStatus[1] && Input.GetKeyDown(KeyCode.Alpha2))
+        if (itemStatus[1] && Input.GetKeyDown(Player.Instance.item2Key))
         {
             Debug.Log("使用攀爬爪");
             enableWallJump = true;
@@ -47,7 +47,7 @@ public class PlayerScene4 : MonoBehaviour {
 
     private void BoostJumpPotion()
     {
-        if (itemStatus[2] && Input.GetKeyDown(KeyCode.Alpha3)&&!isBoostJump)
+        if (itemStatus[2] && Input.GetKeyDown(Player.Instance.item3Key) &&!isBoostJump)
         {
             Debug.Log("使用跳跃药剂");
             Player.Instance.jumpForce = 1.6f * Player.Instance.jumpForce;
@@ -58,7 +58,7 @@ public class PlayerScene4 : MonoBehaviour {
 
     private void BoostRunPotion()
     {
-        if (itemStatus[3] && Input.GetKeyDown(KeyCode.Alpha4) && !isBoostRun)
+        if (itemStatus[3] && Input.GetKeyDown(Player.Instance.item4Key) && !isBoostRun)
         {
             Debug.Log("使用速度药剂");
             Player.Instance.moveSpeed = 2 * Player.Instance.moveSpeed;

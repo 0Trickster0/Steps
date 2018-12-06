@@ -21,6 +21,7 @@ public class Item : MonoBehaviour {
         if (collision.collider.tag == "Player")
         {
             collision.collider.SendMessage("pickUpItem", itemNum);
+            GameObject.Find("BackpackCanvas").SendMessage("PickUpItem", itemNum);
             Destroy(gameObject);
         }
     }

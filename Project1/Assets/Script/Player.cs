@@ -13,12 +13,19 @@ public class Player : MonoBehaviour {
     public float jumpForce;  //跳跃的力
     public float moveSpeed; //水平移动速度
     public bool isDisabled=true;
+    public bool isFailed;
 
     public KeyCode leftKey;
     public KeyCode rightKey;
     public KeyCode jumpKey;
     public KeyCode upKey;
     public KeyCode downKey;
+    public KeyCode item1Key;
+    public KeyCode item2Key;
+    public KeyCode item3Key;
+    public KeyCode item4Key;
+    public KeyCode item5Key;
+    public KeyCode item6Key;
     //单例
     private static Player instance;
     public static Player Instance
@@ -45,8 +52,12 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        Jump();
-        GetObjectForward();
+        if (!isDisabled)
+        {
+            Jump();
+            GetObjectForward();
+        }
+        
     }
 
     private void FixedUpdate()
