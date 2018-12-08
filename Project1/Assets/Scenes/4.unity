@@ -1924,22 +1924,22 @@ Prefab:
     - target: {fileID: 114444765336464262, guid: fdeacea21c1883a4c99d57cbfa12b149,
         type: 2}
       propertyPath: introductionArray.Array.data[0]
-      value: "\u53EF\u4EE5\u9EBB\u9189\u8B66\u5BDF"
+      value: "\u4E00\u4F4D\u524D\u8F88\u7ED9\u6211\u7684\uFF0C\u8BA9\u4EBA\u660F\u7761\u7684\u98DE\u9556"
       objectReference: {fileID: 0}
     - target: {fileID: 114444765336464262, guid: fdeacea21c1883a4c99d57cbfa12b149,
         type: 2}
       propertyPath: introductionArray.Array.data[1]
-      value: "\u6321\u4F4F\u8B66\u5BDF\u89C6\u7EBF"
+      value: "\u4F17\u6240\u5468\u77E5\uFF0C\u8EB2\u5728\u7EB8\u7BB1\u540E\u6C38\u8FDC\u4E0D\u53EF\u80FD\u88AB\u53D1\u73B0"
       objectReference: {fileID: 0}
     - target: {fileID: 114444765336464262, guid: fdeacea21c1883a4c99d57cbfa12b149,
         type: 2}
       propertyPath: introductionArray.Array.data[2]
-      value: "\u6253\u5F00\u4E00\u6247\u95E8"
+      value: "\u5F53\u4E0A\u5E1D\u5173\u4E0A\u4E86\u4E00\u6247\u7A97"
       objectReference: {fileID: 0}
     - target: {fileID: 114444765336464262, guid: fdeacea21c1883a4c99d57cbfa12b149,
         type: 2}
       propertyPath: introductionArray.Array.data[3]
-      value: "\u5438\u5F15\u8B66\u5BDF\u6CE8\u610F\u529B"
+      value: "\u6295\u77F3\u8DD1\u8DEF\uFF0C\u629B\u7816\u9690\u9041"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdeacea21c1883a4c99d57cbfa12b149, type: 2}

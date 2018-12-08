@@ -1,5 +1,30 @@
 ﻿[
-{"id":1,"fontSize":36,"textInterval":0.05,"next":0,"text":"\n\n\n\n\n第二章《哆啦A梦》"},
-{"id":2,"fontSize":29,"textInterval":0.05,"next":1,"text":"\n\n\n\n\n“在所有人当中，儿童的想象力最为丰富。”——麦考莱"}
-
+    {
+        "id": 1,
+        "fontSize": 36,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "第二章《哆啦A梦》"
+    },
+    {
+        "id": 2,
+        "fontSize": 29,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "至少有一点值得庆幸，这个世界再美好不过。好人与坏蛋，都会获得他们应有的结局。只要拥有希望与勇气，总是可以解决所有的问题。这并非什么不可思议的论据，因为事实本应该如此。"
+    },
+    {
+        "id": 3,
+        "fontSize": 29,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "“在所有人当中，儿童的想象力最为丰富。”——麦考莱"
+    },
+    {
+        "id": 4,
+        "fontSize": 29,
+        "textInterval": 0.15,
+        "next": 1,
+        "text": "提示：通过各种道具解决谜题，抵达终点"
+    }
 ]

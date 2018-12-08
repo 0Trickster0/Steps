@@ -1,5 +1,30 @@
 ﻿[
-{"id":1,"fontSize":36,"textInterval":0.05,"next":0,"text":"\n\n\n\n\n第一章《新华字典》"},
-{"id":2,"fontSize":29,"textInterval":0.05,"next":1,"text":"\n\n\n\n\n“毁禁一本好书就是杀死理性本身。”——约翰•弥尔顿"}
-
+    {
+        "id": 1,
+        "fontSize": 36,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "第一章《新华字典》"
+    },
+    {
+        "id": 2,
+        "fontSize": 29,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "人类，作为唯一自诩拥有智慧的生物，已经使用文字作为载体，传承着文明，达数千年之久。从第一个笔画开始，到那本注满拼音的字典，再到浩如烟海的书籍，每一个新生的生命都从无到有地开始寻找接近真理的途径。"
+    },
+    {
+        "id": 1,
+        "fontSize": 29,
+        "textInterval": 0.05,
+        "next": 0,
+        "text": "“毁禁一本好书就是杀死理性本身。”——约翰•弥尔顿"
+    },
+    {
+        "id": 2,
+        "fontSize": 29,
+        "textInterval": 0.15,
+        "next": 1,
+        "text": "提示：收集笔画，通过笔画获取汉字，从而解决谜题，抵达终点。"
+    }
 ]
