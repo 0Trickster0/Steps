@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
-    private bool isShown;
+    public bool isShown;
     public string sceneName;
 
 	// Use this for initialization

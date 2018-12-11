@@ -41,7 +41,6 @@ public class Monster : MonoBehaviour {
             Player.Instance.isFailed = true;
             Debug.Log("Game Over");
             GameObject.Find("SceneCanvas").SendMessage("StageFailure");
-            GameObject.Find("WisePointController").SendMessage("StageFailure", 3);
         }
     }
 }

@@ -94,7 +94,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HardDirt
-500ac8debf499f4cfae6e5f70cc39b6a Assembly-CSharp.dll:.Menu
+74b8f704c29c4a70d1202cbc68fb48d2 Assembly-CSharp.dll:.Menu
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 754551afe4f2531f58476bf14c510657 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -195,7 +195,7 @@ ec85ddc2dce0aab145f0bec566276360 Assembly-CSharp.dll:.UIController
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 813f2b0367f70a6ffcfa935df75ae73d Assembly-CSharp.dll:.Monster
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerScene2
-208fdff9c27401001453482c07280dab Assembly-CSharp.dll:.TextController
+82fa36bc0953a82f6e98d99fdf953ef5 Assembly-CSharp.dll:.TextController
 343b0af52c02bf389c6b83d0273e4d78 Assembly-CSharp.dll:.Book
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.BoardButton
 0670d04b7f1e49f75c1d8bf62f69dc8e Assembly-CSharp.dll:.Stone

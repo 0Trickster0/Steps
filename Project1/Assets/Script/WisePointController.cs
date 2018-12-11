@@ -37,7 +37,7 @@ public class WisePointController : MonoBehaviour {
 
     public void Clear()
     {
-        wisePointArray = new bool[] { false, false, true, true };
+        wisePointArray = new bool[] { false, false, false, false };
     }
 
     private void PickUpWisePoint(int pointNum)

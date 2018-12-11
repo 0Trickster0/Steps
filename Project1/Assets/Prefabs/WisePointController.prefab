@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0719cdc9d48faec49869a1d711ed6acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wisePointArray: 00000101
+  wisePointArray: 00000000

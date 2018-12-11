@@ -25,7 +25,6 @@ public class Spikes : MonoBehaviour {
             GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             Debug.Log("Game Over");
             GameObject.Find("SceneCanvas").SendMessage("StageFailure");
-            GameObject.Find("WisePointController").SendMessage("StageFailure", 3);
             
         }
     }

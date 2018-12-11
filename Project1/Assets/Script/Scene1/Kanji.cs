@@ -9,6 +9,7 @@ public class Kanji : MonoBehaviour {
 
     public int charNum;
     public Sprite charSprite;
+    public GameObject effect;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,7 @@ public class Kanji : MonoBehaviour {
     {
         if (collision.collider.tag == "Player"&&isActive)
         {
+            Instantiate(effect, transform.position, transform.rotation);
             GameObject.Find("Generator").SendMessage("Storage", charNum);
         }
     }

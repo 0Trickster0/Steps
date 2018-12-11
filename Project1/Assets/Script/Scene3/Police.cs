@@ -68,7 +68,6 @@ public class Police : MonoBehaviour {
             {
                 Player.Instance.isFailed = true;
                 GameObject.Find("SceneCanvas").SendMessage("StageFailure");
-                GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
             }
         }
     }
@@ -156,7 +155,6 @@ public class Police : MonoBehaviour {
         {
             Player.Instance.isFailed = true;
             GameObject.Find("SceneCanvas").SendMessage("StageFailure");
-            GameObject.Find("WisePointController").SendMessage("StageFailure", 4);
         }
         if (collision.collider.tag == "Object"|| collision.collider.tag == "Police")
         {

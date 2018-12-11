@@ -15,6 +15,7 @@ public class TextController : MonoBehaviour {
     public List<Node> nodeArray = new List<Node>();
     public Text CanvasText;
     public string nextScene;
+    public string thisScene;
 
     private string shownText;
     private bool isChangingColor;
@@ -78,7 +79,7 @@ public class TextController : MonoBehaviour {
     //按照Json文件顺序显示文本
     public void ShowJsonText()
     {
-        if (Input.GetMouseButtonDown(0)&&!isChangingColor)
+        if (Input.GetMouseButtonDown(0)&&!isChangingColor&&!GameObject.Find("Menu").GetComponent<Menu>().isShown)
         {
             if (shownText != nodeArray[i].text)
             {
@@ -119,6 +120,11 @@ public class TextController : MonoBehaviour {
                     {
                         SceneManager.LoadScene("5");
                     }
+                }
+                //重新加载本关
+                else if(nodeArray[i].next == 4)
+                {
+                    SceneManager.LoadScene(thisScene);
                 }
             }
         }
